@@ -1,59 +1,33 @@
 ---
+
 title: "Worklog Tuần 3"
-date: 2024-01-01
-weight: 1
+date: 2026-05-04
+weight: 3
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
-
+ 
 ### Mục tiêu tuần 3:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Triển khai hạ tầng EC2 production-ready với tính sẵn sàng cao.
+* Kiểm tra kết nối VPC và bảo mật truy cập vào EC2.
+* Cấu hình VPN và dọn dẹp tài nguyên đã tạo.
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+### Các công việc thực tế trong tuần 3:
+| Ngày | Nội dung | Nguồn tài liệu |
+| --- | --- | --- |
+| 04/05/2026 | - Bắt đầu Lab 3: triển khai hạ tầng Amazon EC2 production-ready trên mạng của Tuần 2.<br>- Áp dụng thiết kế Multi-AZ và cấu hình NAT gateway dự phòng để đảm bảo tính sẵn sàng. | <https://000003.awsstudygroup.com/vi/4-createec2server/> |
+| 06/05/2026 | - Sử dụng VPC Reachability Analyzer để kiểm tra và xử lý lỗi kết nối nội mạng.<br>- Cấu hình truy cập an toàn với AWS Systems Manager Session Manager và EC2 Instance Connect Endpoint.<br>- Thiết lập giám sát và cảnh báo bằng Amazon CloudWatch. | <https://000003.awsstudygroup.com/vi/4-createec2server/> |
+| 08/05/2026 | - Thực hành mở rộng mạng: tạo AWS Site-to-Site VPN Connection.<br>- Nghiên cứu strongSwan tích hợp với AWS Transit Gateway.<br>- Dọn dẹp tài nguyên AWS tạm thời để tối ưu chi phí. | <https://www.google.com/search?q=https://000003.awsstudygroup.com/vi/5-vpn/><br><https://000003.awsstudygroup.com/vi/6-cleanup/> |
+| 09/05/2026 | - Tham gia sự kiện AWS tại văn phòng để học hỏi trực tiếp từ chuyên gia.<br>- Tiếp thu xu hướng công nghệ AI mới và trao đổi phương pháp làm việc chuyên nghiệp trong kỳ thực tập. | Sự kiện nội bộ |
 
 ### Kết quả đạt được tuần 3:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Triển khai hạ tầng EC2 Multi-AZ và kiến trúc NAT gateway dự phòng để tăng tính sẵn sàng.
+* Xác thực kết nối VPC và bảo mật truy cập EC2 bằng Systems Manager và EC2 Instance Connect.
+* Cấu hình VPN Site-to-Site và nghiên cứu tích hợp strongSwan với AWS Transit Gateway.
+* Dọn dẹp tài nguyên lab để giảm phí AWS và giữ môi trường gọn gàng.
+* Học thêm từ sự kiện AWS chuyên gia và nâng cao phương pháp làm việc chuyên nghiệp.
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
 
 

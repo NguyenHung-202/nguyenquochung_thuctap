@@ -1,59 +1,34 @@
 ---
+
 title: "Worklog Tuần 5"
 date: 2024-01-01
-weight: 1
+weight: 5
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
-
+ 
 ### Mục tiêu tuần 5:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Nghiên cứu AWS Generative AI với Amazon Bedrock.
+* Tìm hiểu hosting trang web tĩnh trên Amazon S3 và cấu hình bảo mật Bucket.
+* Tích hợp nội dung S3 tĩnh với API dịch vụ AI.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Ngày | Công việc | Nguồn tài liệu |
+| --- | --- | --- |
+| 18/05/2026 | - Nghiên cứu Generative AI và Amazon Bedrock.<br>- Tìm hiểu kiến trúc ứng dụng hiện đại kết hợp Static Website Hosting (Frontend) với dịch vụ AI Backend. | <https://000005.awsstudygroup.com/vi/1-introduce/> |
+| 20/05/2026 | - Thảo luận triển khai và quy trình dự án với cán bộ hướng dẫn thực tập.<br>- Nghiên cứu Amazon S3 Hosting cho website tĩnh, cấu hình quyền truy cập Public Access và Bucket Policy. | <https://000005.awsstudygroup.com/vi/3/s3hosting/> |
+| 22/05/2026 | - Thực hành Lab 5 (S3 Hosting): tạo S3 bucket và cấu hình Static Website Hosting trên Console.<br>- Triển khai index.html và cấu hình public access để chạy trang web từ Endpoint AWS.<br>- Kiểm tra hiển thị trang web và cấu hình trang lỗi tùy chỉnh error.html. | <https://000005.awsstudygroup.com/vi/3-s3hosting/> |
+| 23/05/2026 | - Tích hợp website S3 tĩnh với API dịch vụ AI (Amazon Bedrock / Rekognition).<br>- Đánh giá khả năng hoạt động, Block Public Access/Policy và tối ưu chi phí so với máy chủ truyền thống.<br>- Hoàn thành báo cáo Worklog tuần 5 và chuẩn bị kế hoạch tổng kết thực tập. | <https://000005.awsstudygroup.com/vi/4-integrate/> |
 
 ### Kết quả đạt được tuần 5:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Nghiên cứu Amazon Bedrock và các khái niệm Generative AI.
+* Thiết kế kiến trúc hiện đại kết hợp hosting S3 tĩnh với backend AI.
+* Hoàn thành cấu hình S3 Static Website Hosting, quyền truy cập public và trang lỗi tùy chỉnh.
+* Tích hợp website với API dịch vụ AI và xem xét cấu hình bảo mật Bucket.
+* Đánh giá tối ưu chi phí của S3 Hosting so với giải pháp hosting truyền thống.
+* Hoàn thành báo cáo tuần 5 và chuẩn bị kế hoạch tổng kết thực tập.
 
 

@@ -1,59 +1,31 @@
 ---
+
 title: "Worklog Tuần 10"
 date: 2024-01-01
-weight: 2
+weight: 10
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
-
+ 
 ### Mục tiêu tuần 10:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Hoàn thiện thiết kế kiến trúc AWS của nhóm và chuẩn bị cho đánh giá cộng đồng.
+* Tìm hiểu các thực hành tốt của cộng đồng AWS và mô hình kiến trúc Voice AI.
+* Dọn dẹp tài khoản thực hành và bảo toàn credit AWS.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Ngày | Công việc | Nguồn tài liệu |
+| --- | --- | --- |
+| 26/06/2026 | - Họp nhóm (Thứ Sáu): Tập hợp các thành viên trong nhóm để thảo luận, phối hợp xây dựng và hoàn thiện sơ đồ kiến trúc dự án chuẩn mẫu AWS. | Biên bản họp nhóm / AWS Well-Architected Tool |
+| 27/06/2026 | - Tham gia sự kiện (Thứ Bảy): Tham gia buổi Event online của cộng đồng, theo dõi các phần trình bày Demo kỹ thuật từ các chuyên gia và các nhóm.<br>- Nghiên cứu sâu về giải pháp kiến trúc liên quan đến ứng dụng trí tuệ nhân tạo giọng nói (Voice AI). | Cộng đồng AWS / Tài liệu AWS Voice AI (Amazon Polly, Lex, Transcribe) |
+| 28/06/2026 | - Xin ý kiến chuyên môn: Đóng gói sườn dự án của nhóm và gửi lên cộng đồng (Group AWS) để xin ý kiến đóng góp, nhận xét và đánh giá từ các anh chị kỹ sư đi trước.<br>- Rà soát lại tài khoản thực hành, dọn dẹp các tài nguyên dư thừa phát sinh trong tuần để bảo toàn credit. | AWS Vietnam Community / Quy trình AWS Cleanup |
 
 ### Kết quả đạt được tuần 10:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Hoàn thành phối hợp nhóm để hoàn thiện sơ đồ kiến trúc AWS theo chuẩn Well-Architected.
+* Tham gia sự kiện cộng đồng AWS và nghiên cứu các giải pháp Voice AI.
+* Xin được phản hồi chuyên môn cho sườn dự án và điều chỉnh thiết kế theo góp ý.
+* Xác nhận dọn dẹp tài khoản thực hành và loại bỏ tài nguyên dư thừa.
 
 

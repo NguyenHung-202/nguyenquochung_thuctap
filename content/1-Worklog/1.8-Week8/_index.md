@@ -1,29 +1,27 @@
 ---
+
 title: "Week 8 Worklog"
 date: 2024-01-01
-weight: 1
+weight: 8
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
-
+ 
 ### Week 8 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Review and consolidate all internship knowledge from Lab 1 to Lab 7.
+* Deepen understanding of AWS infrastructure components and project architecture.
+* Prepare a detailed AWS Well-Architected project design and cleanup residual resources.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Actual tasks in Week 8:
 
+| Date | Content | Reference |
+| --- | --- | --- |
+| 08/06/2026 | - Self-study and review: consolidated all internship knowledge and practice from Lab 1 through Lab 7.<br>- Deepened understanding of service interactions across IAM, VPC Multi-AZ, S3, RDS, CloudWatch, and Route 53.<br>- Used video guidance to support learning and architecture review. | Summary documents from Lab 1 - Lab 7 (https://cloudjourney.awsstudygroup.com/vi/), YouTube learning source: https://www.youtube.com/watch?v=l8isyDe-GwY&list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i&index=2 |
+| 09/06/2026 | - Visited the internship office to meet mentors in person.<br>- Discussed project direction and received initial guidance from mentors for building a production-ready AWS architecture. | Internal company / Mentor discussion |
+| 11/06/2026 | - Drafted project structure: researched related infrastructure and AWS Well-Architected Framework guidance.<br>- Analyzed data flow and used diagram tools to design a standard AWS architecture integrating ALB, ASG, S3, and RDS.<br>- Referenced YouTube architecture outline guidance while shaping the project design. | AWS Well-Architected Framework or Company architecture documentation, Video outline source: https://www.youtube.com/watch?v=l8isyDe-GwY&list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i&index=2 |
+| 13/06/2026 | - Requested mentor feedback on the AWS architecture diagram.<br>- Reviewed and cleaned up leftover AWS resources to protect credits and avoid unexpected costs. | Internal company / AWS Cleanup process |
+| 15/06/2026 | - Reviewed and reorganized knowledge: updated the architecture diagram using mentor feedback.<br>- Prepared documentation to support deployment phases and the next internship report. | Internal FCAJ / Personal notes |
 
 ### Week 8 Achievements:
 

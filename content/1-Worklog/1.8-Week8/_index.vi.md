@@ -1,29 +1,27 @@
 ---
+
 title: "Worklog Tuần 8"
 date: 2024-01-01
-weight: 1
+weight: 8
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
-
+ 
 ### Mục tiêu tuần 8:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Ôn tập và hệ thống lại toàn bộ kiến thức thực tập từ Lab 1 đến Lab 7.
+* Tìm hiểu sâu về các thành phần hạ tầng AWS và kiến trúc dự án.
+* Chuẩn bị thiết kế dự án theo AWS Well-Architected và dọn dẹp tài nguyên dư thừa.
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Các công việc thực tế trong tuần 8:
 
+| Ngày | Nội dung | Nguồn tài liệu |
+| --- | --- | --- |
+| 08/06/2026 | - Tự học và ôn tập: chủ động hệ thống hoá toàn bộ kiến thức thực tập và đã thực hiện từ Lab 1 đến Lab 7.<br>- Củng cố sâu cơ chế hoạt động và phối hợp của các dịch vụ với các lớp: IAM, VPC Multi-AZ, S3, RDS, CloudWatch và Route 53.<br>- Tham khảo video hướng dẫn để hỗ trợ việc học và rà soát kiến trúc. | Tổng hợp tài liệu từ Lab 1 - Lab 7 (https://cloudjourney.awsstudygroup.com/vi/), Nguồn học YouTube: https://www.youtube.com/watch?v=l8isyDe-GwY&list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i&index=2 |
+| 09/06/2026 | - Lên đơn vị thực tập: đến công ty gặp gỡ trực tiếp các anh chị hướng dẫn.<br>- Trao đổi, xin ý kiến và nhận định hướng ban đầu từ Mentor để chuẩn bị cho quá trình thực xây dựng dự án cụ thể theo chuẩn môi AWS. | Nội bộ doanh nghiệp / Thảo luận cùng Mentor |
+| 11/06/2026 | - Tự làm sườn dự án: nghiên cứu tài liệu liên quan cấu hình hạ tầng và cấu AWS (AWS Well-Architected Framework).<br>- Tiến hành phân tích luồng dữ liệu hệ thống và sử dụng công cụ trực quan hoá nhóm phần mềm về sơ đồ để dự thảo hoàn thiện sơ đồ kiến trúc hệ thống chuẩn mẫu AWS (tích hợp ALB, ASG, S3 và RDS).<br>- Tham khảo video hướng dẫn thiết kế sơ đồ để hoàn thiện kế hoạch dự án. | AWS Well-Architected Framework hoặc Công ty và sơ đồ kiến trúc, Nguồn video: https://www.youtube.com/watch?v=l8isyDe-GwY&list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i&index=2 |
+| 13/06/2026 | - Xin ý kiến hướng dẫn: mang bản vẽ sơ đồ kiến trúc thông cảm mẫu AWS để thiết kế ra trao đổi thực tế, xin ý kiến và đánh giá tối ưu từ các anh chị hướng dẫn tại công ty.<br>- Thực hiện rà soát và dọn dẹp các tài nguyên (Clean up) còn sót lại trên tài khoản AWS để bảo vệ credit, tránh phát sinh chi phí ngoài ý muốn. | Nội bộ doanh nghiệp / Quy trình AWS Cleanup |
+| 15/06/2026 | - Tự ôn tập kiến thức: chuẩn bị cấu trúc lại toàn bộ học vấn hệ thống, sửa đổi sơ đồ kiến trúc theo các ý kiến góp ý của Mentor.<br>- Hệ thống hoá tài liệu để chuẩn bị cho các giai đoạn triển khai và hoàn thiện báo cáo thực tập tiếp theo. | Nội bộ FCAJ / Nhật ký cá nhân |
 
 ### Kết quả đạt được tuần 8:
 

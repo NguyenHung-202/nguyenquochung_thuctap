@@ -1,59 +1,33 @@
 ---
+
 title: "Worklog Tuần 9"
 date: 2024-01-01
-weight: 1
+weight: 9
 chapter: false
 pre: " <b> 1.9. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
-
+ 
 ### Mục tiêu tuần 9:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Tự ôn tập kiến thức Lab 1–Lab 10 và chuẩn bị đánh giá cuối cùng về kiến trúc dự án AWS.
+* Thực hành quy trình quản trị AWS và tối ưu chi phí trên AWS Console.
+* Kiểm tra và dọn dẹp tài khoản thực hành, đảm bảo loại bỏ tất cả tài nguyên không cần thiết.
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Các công việc thực tế trong tuần 9:
 
+| Ngày | Nội dung | Nguồn tài liệu |
+| --- | --- | --- |
+| 15/06/2026 | - Tự ôn tập kiến thức: Chủ động rà soát lại cấu hình và các bước thực hiện của các bài lab đã làm từ tuần trước.<br>- Cũng có kĩ năng thực hành các dịch vụ quản trị hệ thống và tối ưu chi phí trên AWS Console. | Tổng hợp tài liệu Lab 1 – Lab 10 (https://cloudjourney.awsstudygroup.com/) |
+| 17/06/2026 | - Nghiên cứu sườn dự án: Tìm hiểu và nghiên cứu cách thức xây dựng sườn dự án chuẩn mẫu AWS từ tài liệu của các nhóm khác trong khoá học. | Tài liệu các nhóm trong khoá học / AWS Architecture Center |
+| 19/06/2026 | - Học hỏi từ bài review: Nghiên cứu kỹ các sơ đồ kiến trúc và sườn dự án được các anh chị hướng dẫn đánh giá tại công ty sửa đổi, góp ý và đánh giá.<br>- Ghi nhận các điểm cần tối ưu về tính sẵn sàng cao và bảo mật để rút kinh nghiệm. | Nội bộ doanh nghiệp / Thảo luận cùng Mentor |
+| 20/06/2026 | - Hệ thống hoá kiến thức: Tổng hợp lại các bài học rút ra từ sườn dự án của các nhóm và các lỗi cần tránh từ các bài được review.<br>- Thực hiện kiểm tra tài khoản thực hành, đảm bảo tất cả tài nguyên dư thừa được dọn dẹp sạch sẽ (Clean up). | Nội bộ FCAJ / AWS Console |
 
 ### Kết quả đạt được tuần 9:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Hoàn thiện ôn tập Lab 1–Lab 10 và quy trình thực hành AWS.
+* Nghiên cứu kiến trúc dự án chuẩn AWS và các mô hình tham khảo.
+* Tiếp thu phản hồi review để cải thiện tính sẵn sàng cao và bảo mật.
+* Tổng hợp các bài học dự án và nhận diện các lỗi cần tránh.
+* Xác nhận dọn dẹp tài khoản thực hành và loại bỏ tài nguyên dư thừa.
 
 

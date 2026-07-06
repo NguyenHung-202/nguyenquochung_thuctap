@@ -1,58 +1,34 @@
 ---
+
 title: "Worklog Tuần 6"
 date: 2024-01-01
-weight: 1
+weight: 6
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
-
+ 
 ### Mục tiêu tuần 6:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Nghiên cứu lý thuyết Lab 6: tập trung vào tính sẵn sàng cao và khả năng mở rộng.
+* Hiểu kiến trúc Application Load Balancer (ALB) và Auto Scaling Group (ASG).
+* Triển khai VPC doanh nghiệp và mô hình chịu lỗi đa vùng.
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Các công việc thực tế trong tuần 6:
 
+| Ngày | Nội dung | Nguồn tài liệu |
+| --- | --- | --- |
+| 25/05/2026 | - Bắt đầu nghiên cứu lý thuyết Lab 6: tập trung vào high availability và scalability.<br>- Tìm hiểu kiến trúc ALB và cơ chế phối hợp ASG.<br>- Nghiên cứu chiến lược triển khai multi-AZ để tối ưu khả năng chịu lỗi. | <https://000006.awsstudygroup.com/vi/1-introduce/> |
+| 27/05/2026 | - Thực hành Lab 6 (Phần 1): thiết lập VPC doanh nghiệp với Public/Private Subnet trên 3 AZ.<br>- Tạo AMI từ EC2 mẫu và cấu hình Launch Template cho ứng dụng Node.js/React. | <https://000006.awsstudygroup.com/vi/2-part1/> |
+| 29/05/2026 | - Thực hành Lab 6 (Phần 2): cấu hình ALB và Auto Scaling Group để điều phối lưu lượng.<br>- Kiểm tra fault tolerance bằng cách tắt thủ công một EC2 và quan sát ASG khởi tạo lại.<br>- Chẩn đoán và xử lý lỗi Security Group và lỗi 504 Gateway Time-out. | <https://000006.awsstudygroup.com/vi/3-part2/> |
+| 30/05/2026 | - Tham gia sự kiện nội bộ: kết nối và tìm hiểu về hackathon công nghệ doanh nghiệp.<br>- Học hỏi kinh nghiệm làm việc nhóm hiệu quả, giải quyết bài toán dưới áp lực và xây dựng MVP.<br>- Tổng kết Tuần 6: tối ưu chi phí vận hành và quản lý hạ tầng Cloud tự động. | Nội bộ FCAJ |
 
 ### Kết quả đạt được tuần 6:
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Hiểu được lý thuyết high availability và scalability cho hạ tầng cloud.
+* Triển khai VPC với public/private subnet đa AZ.
+* Tạo AMI và Launch Template triển khai ứng dụng.
+* Cấu hình ALB và ASG để tự động mở rộng và phục hồi lỗi.
+* Đã chẩn đoán được lỗi Security Group và 504 Gateway Time-out.
+* Hoàn thành báo cáo tuần 6 và hệ thống hoá kinh nghiệm quản trị Cloud tự động.
 
 
