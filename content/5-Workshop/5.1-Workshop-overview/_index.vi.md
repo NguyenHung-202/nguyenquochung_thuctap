@@ -1,19 +1,33 @@
 ---
 title : "Giới thiệu"
-date : 2024-01-01 
+date : 2026-07-08
 weight : 1
 chapter : false
 pre : " <b> 5.1. </b> "
 ---
 
-#### Giới thiệu về VPC Endpoint
+#### Kiến trúc hệ thống
 
-+ Điểm cuối VPC (endpoint) là thiết bị ảo. Chúng là các thành phần VPC có thể mở rộng theo chiều ngang, dự phòng và có tính sẵn sàng cao. Chúng cho phép giao tiếp giữa tài nguyên điện toán của bạn và dịch vụ AWS mà không gây ra rủi ro về tính sẵn sàng.
-+ Tài nguyên điện toán đang chạy trong VPC có thể truy cập Amazon S3 bằng cách sử dụng điểm cuối Gateway. Interface Endpoint  PrivateLink có thể được sử dụng bởi tài nguyên chạy trong VPC hoặc tại TTDL.
+Hệ thống được xây dựng hoàn toàn trên nền tảng **Serverless** của AWS, giúp tự động co giãn theo lượng người dùng, tối ưu chi phí và không cần quản lý máy chủ.
 
-#### Tổng quan về workshop
-Trong workshop này, bạn sẽ sử dụng hai VPC.
-+ **"VPC Cloud"** dành cho các tài nguyên cloud như Gateway endpoint và EC2 instance để kiểm tra.
-+ **"VPC On-Prem"** mô phỏng môi trường truyền thống như nhà máy hoặc trung tâm dữ liệu của công ty. Một EC2 Instance chạy phần mềm StrongSwan VPN đã được triển khai trong "VPC On-prem" và được cấu hình tự động để thiết lập đường hầm VPN Site-to-Site với AWS Transit Gateway. VPN này mô phỏng kết nối từ một vị trí tại TTDL (on-prem) với AWS cloud. Để giảm thiểu chi phí, chỉ một phiên bản VPN được cung cấp để hỗ trợ workshop này. Khi lập kế hoạch kết nối VPN cho production workloads của bạn, AWS khuyên bạn nên sử dụng nhiều thiết bị VPN để có tính sẵn sàng cao.
+![System Architecture](/sodo.png)
 
-![overview](/images/5-Workshop/5.1-Workshop-overview/diagram1.png)
+#### Các thành phần chính của dự án
+
+1. **Xác thực & Bảo mật (Giai đoạn 1):**
+   * **AWS Cognito User Pool:** Quản lý đăng ký, đăng nhập tài khoản và xác minh JWT token từ client.
+   * **AWS IAM Role & Policies:** Áp dụng nguyên tắc đặc quyền tối thiểu (least privilege).
+2. **API & Tiếp nhận dữ liệu (Giai đoạn 2):**
+   * **Amazon API Gateway:** Cung cấp REST endpoint bảo mật, được bảo vệ bởi Cognito.
+   * **S3 Presigned URL:** Cho phép trình duyệt upload trực tiếp lên S3, bỏ qua Lambda.
+   * **Amazon SQS:** Tách biệt phản hồi API khỏi việc khởi chạy state machine phía backend.
+3. **AI Pipeline (Giai đoạn 3):**
+   * **AWS Step Functions:** Điều phối toàn bộ workflow serverless.
+   * **Amazon Textract:** Trích xuất văn bản OCR từ tài liệu viết tay hoặc in sẵn.
+   * **Google Gemini AI:** Đánh giá ngữ pháp, từ vựng, cấu trúc và tính mạch lạc theo thang 100 điểm.
+4. **Lưu trữ & Thông báo (Giai đoạn 4):**
+   * **Amazon DynamoDB:** Lưu trữ metadata, trạng thái và điểm tổng kết.
+   * **Amazon S3 (Result Bucket):** Lưu trữ báo cáo phản hồi JSON chi tiết.
+   * **Amazon SNS:** Gửi kết quả chấm điểm trực tiếp đến email người dùng.
+5. **Phân phối (Giai đoạn 5):**
+   * **Amazon CloudFront & S3 Website:** Phân phối React SPA qua HTTPS bảo mật trên toàn cầu.

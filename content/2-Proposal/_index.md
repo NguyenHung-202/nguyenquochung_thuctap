@@ -1,110 +1,116 @@
 ---
 title: "Proposal"
-date: 2024-01-01
+date: 2026-06-25
 weight: 2
 chapter: false
 pre: " <b> 2. </b> "
 ---
- 
-In this section, you need to summarize the contents of the workshop that you **plan** to conduct.
 
-# IoT Weather Platform for Lab Research
-## A Unified AWS Serverless Solution for Real-Time Weather Monitoring
+# Automated English Essay Scoring System
+## An Enterprise-Grade AWS Serverless & GenAI Orchestration Architecture
 
 ### 1. Executive Summary
- 
-### What’s the Problem?
-Current weather stations require manual data collection, becoming unmanageable with multiple units. There is no centralized system for real-time data or analytics, and third-party platforms are costly and overly complex.
+The Automated English Essay Scoring System is an end-to-end essay grading platform built natively on AWS Cloud and integrated with the Google Gemini API to deliver fast, accurate, and consistent English essay evaluation. The system enables users to upload essays, automatically extract their content, run AI-based analysis, and return scores together with detailed, structured feedback.
 
-### The Solution
-The platform uses AWS IoT Core to ingest MQTT data, AWS Lambda and API Gateway for processing, Amazon S3 for storage (including a data lake), and AWS Glue Crawlers and ETL jobs to extract, transform, and load data from the S3 data lake to another S3 bucket for analysis. AWS Amplify with Next.js provides the web interface, and Amazon Cognito ensures secure access. Similar to Thingsboard and CoreIoT, users can register new devices and manage connections, though this platform operates on a smaller scale and is designed for private use. Key features include real-time dashboards, trend analysis, and low operational costs.
+### 2. Problem Statement
 
-### Benefits and Return on Investment
-The solution establishes a foundational resource for lab members to develop a larger IoT platform, serving as a study resource, and provides a data foundation for AI enthusiasts for model training or analysis. It reduces manual reporting for each station via a centralized platform, simplifying management and maintenance, and improves data reliability. Monthly costs are $0.66 USD per the AWS Pricing Calculator, with a 12-month total of $7.92 USD. All IoT equipment costs are covered by the existing weather station setup, eliminating additional development expenses. The break-even period of 6-12 months is achieved through significant time savings from reduced manual work.
+#### Current Challenges
+* Today, English essay scoring is mostly manual — time-consuming, costly, and dependent on the individual grader, which leads to inconsistent results. Learners also have to wait a long time to receive their score and detailed feedback.
+
+#### Proposed Solution
+* Build a serverless English essay scoring system on AWS, integrated with the Google Gemini API, to analyze content, evaluate essays, and return scores with fast, accurate feedback.
+
+#### Benefits & Return on Investment (ROI)
+* The system reduces grading time and cost, improves evaluation consistency, and increases the effectiveness of learner support. The serverless architecture on AWS also optimizes operating cost, scales on demand, and delivers long-term ROI.
 
 ### 3. Solution Architecture
-The platform employs a serverless AWS architecture to manage data from 5 Raspberry Pi-based stations, scalable to 15. Data is ingested via AWS IoT Core, stored in an S3 data lake, and processed by AWS Glue Crawlers and ETL jobs to transform and load it into another S3 bucket for analysis. Lambda and API Gateway handle additional processing, while Amplify with Next.js hosts the dashboard, secured by Cognito. The architecture is detailed below:
 
-![IoT Weather Station Architecture](/images/2-Proposal/edge_architecture.jpeg)
+The system follows a fully serverless architecture on AWS. Users access the application through AWS Amplify and Amazon CloudFront, then call Amazon API Gateway. Amazon Cognito authenticates users; AWS Lambda runs the business logic; Amazon S3 stores uploaded essays and generated reports; Amazon SQS together with AWS Step Functions orchestrate the processing workflow. Amazon Textract extracts text from documents, and the Google Gemini API performs essay scoring and evaluation. Results are persisted into Amazon DynamoDB and Amazon S3, while Amazon SNS pushes notifications to the end user. The whole system is monitored with Amazon CloudWatch, AWS X-Ray, and secured with AWS IAM.
 
-![IoT Weather Platform Architecture](/images/2-Proposal/platform_architecture.jpeg)
+![Automated English Essay Scoring System Architecture](/images/AWS-Serverless-AI-Architecture.drawio.png)
 
-### AWS Services Used
-- **AWS IoT Core**: Ingests MQTT data from 5 stations, scalable to 15.
-- **AWS Lambda**: Processes data and triggers Glue jobs (two functions).
-- **Amazon API Gateway**: Facilitates web app communication.
-- **Amazon S3**: Stores raw data in a data lake and processed outputs (two buckets).
-- **AWS Glue**: Crawlers catalog data, and ETL jobs transform and load it.
-- **AWS Amplify**: Hosts the Next.js web interface.
-- **Amazon Cognito**: Secures access for lab users.
+#### AWS Services Used
 
-### Component Design
-- **Edge Devices**: Raspberry Pi collects and filters sensor data, sending it to IoT Core.
-- **Data Ingestion**: AWS IoT Core receives MQTT messages from the edge devices.
-- **Data Storage**: Raw data is stored in an S3 data lake; processed data is stored in another S3 bucket.
-- **Data Processing**: AWS Glue Crawlers catalog the data, and ETL jobs transform it for analysis.
-- **Web Interface**: AWS Amplify hosts a Next.js app for real-time dashboards and analytics.
-- **User Management**: Amazon Cognito manages user access, allowing up to 5 active accounts.
+| Functional Area | AWS Services | Detailed Technical Role |
+| :--- | :--- | :--- |
+| **Edge / Frontend** | **AWS Amplify + CloudFront** | Host and distribute the frontend application globally with low latency. |
+| **Auth & API** | **Amazon Cognito + API Gateway** | JWT-based authentication and secure endpoints to issue S3 Presigned URLs. |
+| **Document Intake** | **Amazon S3 + Amazon SQS** | Store raw essays in a secured bucket and publish events into the queue to offload the compute tier. |
+| **Core AI Orchestration** | **AWS Step Functions** | Orchestrate the state machine workflow, manage branching, track progress, and handle errors. |
+| **Document Analysis** | **Amazon Textract** | Run advanced OCR to extract text blocks from images or scanned PDFs. |
+| **AI Evaluation** | **AWS Lambda + Gemini API** | Invoke `Gemini 1.5 Flash` to score grammar structure, writing quality, and return a structured JSON result. |
+| **Data Storage** | **Amazon DynamoDB + Amazon S3** | Store processing status and aggregated scores in NoSQL; persist detailed JSON reports in the results S3 bucket. |
+| **Notifications** | **Amazon SNS** | Publish status updates and the final score (Email/SMS) directly to the User/Admin. |
+
+---
 
 ### 4. Technical Implementation
-**Implementation Phases**
-This project has two parts—setting up weather edge stations and building the weather platform—each following 4 phases:
-- Build Theory and Draw Architecture: Research Raspberry Pi setup with ESP32 sensors and design the AWS serverless architecture (1 month pre-internship)
-- Calculate Price and Check Practicality: Use AWS Pricing Calculator to estimate costs and adjust if needed (Month 1).
-- Fix Architecture for Cost or Solution Fit: Tweak the design (e.g., optimize Lambda with Next.js) to stay cost-effective and usable (Month 2).
-- Develop, Test, and Deploy: Code the Raspberry Pi setup, AWS services with CDK/SDK, and Next.js app, then test and release to production (Months 2-3).
+*Implementation phases*
 
-**Technical Requirements**
-- Weather Edge Station: Sensors (temperature, humidity, rainfall, wind speed), a microcontroller (ESP32), and a Raspberry Pi as the edge device. Raspberry Pi runs Raspbian, handles Docker for filtering, and sends 1 MB/day per station via MQTT over Wi-Fi.
-- Weather Platform: Practical knowledge of AWS Amplify (hosting Next.js), Lambda (minimal use due to Next.js), AWS Glue (ETL), S3 (two buckets), IoT Core (gateway and rules), and Cognito (5 users). Use AWS CDK/SDK to code interactions (e.g., IoT Core rules to S3). Next.js reduces Lambda workload for the fullstack web app.
+1. *System analysis & design*: Functional analysis, system architecture design, database design, UI design, and selection of appropriate AWS services.
+2. *System development*: Build the user interface, develop the backend, integrate AWS services (Amplify, API Gateway, Lambda, Cognito, S3, DynamoDB…), and integrate the Google Gemini API for essay scoring. 
+3. *Testing*: Functional testing, bug fixing, performance tuning, security review, evaluation of scoring results, and finalization.
+4. *Deployment*: Deploy the system to AWS, run real-world operation checks, evaluate results, finalize documentation, and prepare the report and presentation.
 
-### 5. Timeline & Milestones
-**Project Timeline**
-- Pre-Internship (Month 0): 1 month for planning and old station review.
-- Internship (Months 1-3): 3 months.
-    - Month 1: Study AWS and upgrade hardware.
-    - Month 2: Design and adjust architecture.
-    - Month 3: Implement, test, and launch.
-- Post-Launch: Up to 1 year for research.
+### 5. Infrastructure & Operations
+
+#### Security, Governance & Monitoring (Cross-cutting)
+- **Keywords**: *AWS IAM, Amazon X-Ray, Amazon CloudWatch, AWS Systems Manager*.
+- **Explanations**: 
+    * **AWS IAM**: Apply the Least Privilege principle to execution roles between serverless services.
+    * **Amazon CloudWatch**: Centralize logs, monitor performance metrics, and trigger automated alerts when error rates exceed thresholds.
+    * **Amazon X-Ray**: Provide distributed tracing across API Gateway, Lambda, and Step Functions to localize latency bottlenecks.
+    * **AWS Systems Manager**: Securely store environment variables and sensitive configuration (such as the Google Gemini API Key) in Parameter Store.
+
+---
 
 ### 6. Budget Estimation
-You can find the budget estimation on the [AWS Pricing Calculator](https://calculator.aws/#/estimate?id=621f38b12a1ef026842ba2ddfe46ff936ed4ab01).  
-Or you can download the [Budget Estimation File](../attachments/budget_estimation.pdf).
 
-### Infrastructure Costs
-- AWS Services:
-    - AWS Lambda: $0.00/month (1,000 requests, 512 MB storage).
-    - S3 Standard: $0.15/month (6 GB, 2,100 requests, 1 GB scanned).
-    - Data Transfer: $0.02/month (1 GB inbound, 1 GB outbound).
-    - AWS Amplify: $0.35/month (256 MB, 500 ms requests).
-    - Amazon API Gateway: $0.01/month (2,000 requests).
-    - AWS Glue ETL Jobs: $0.02/month (2 DPUs).
-    - AWS Glue Crawlers: $0.07/month (1 crawler).
-    - MQTT (IoT Core): $0.08/month (5 devices, 45,000 messages).
+#### Infrastructure Costs
+- **AWS Amplify**: 2.50 USD/month (120 build minutes, 2 GB storage, 30 GB data transfer).
+- **Amazon CloudFront**: 1.20 USD/month (30 GB Internet data transfer out, 100,000 HTTPS requests).
+- **Amazon API Gateway**: 0.10 USD/month (15,000 REST API requests).
+- **Amazon Cognito**: 0.00 USD/month (300 Monthly Active Users — within Free Tier).
+- **AWS Lambda**: 0.25 USD/month (12,000 requests, 512 MB memory, ~2 s average execution).
+- **Amazon S3 Standard**: 0.60 USD/month (20 GB storage, 6,000 PUT requests, 10,000 GET requests).
+- **Amazon SQS**: 0.01 USD/month (6,000 message requests).
+- **Amazon Textract**: 9.00 USD/month (6,000 document pages processed).
+- **Amazon DynamoDB**: 0.80 USD/month (2 GB storage, 20,000 Read requests, 10,000 Write requests).
+- **Amazon SNS**: 0.01 USD/month (3,000 notifications delivered).
+- **Amazon CloudWatch**: 1.20 USD/month (5 GB logs, 20 metrics, 1 dashboard).
 
-Total: $0.7/month, $8.40/12 months
+**Total infrastructure cost: 15.67 USD / month, 188.04 USD / 12 months**
 
-- Hardware: $265 one-time (Raspberry Pi 5 and sensors).
+---
 
 ### 7. Risk Assessment
+
 #### Risk Matrix
-- Network Outages: Medium impact, medium probability.
-- Sensor Failures: High impact, low probability.
-- Cost Overruns: Medium impact, low probability.
+- Network outages.
+- Schedule slippage due to large workload.
+- AWS service costs exceeding the budget.
+- Errors when integrating AWS services and the Google Gemini API.
+- Inaccurate or unstable AI essay evaluation.
+- Limited experience with some services.
 
 #### Mitigation Strategies
-- Network: Local storage on Raspberry Pi with Docker.
-- Sensors: Regular checks and spares.
-- Cost: AWS budget alerts and optimization.
+- Network: Local caching on Raspberry Pi using Docker.
+- Schedule: Build a detailed weekly plan and prioritize core features first.
+- AWS cost overrun: Use AWS Pricing Calculator for estimates, monitor Billing Dashboard, and leverage AWS Free Tier whenever possible.
+- AWS and Gemini API integration errors: Test each component independently before full system integration.
+- Inaccurate AI evaluation: Build clear prompts, validate against multiple datasets, and iterate on the evaluation logic.
+- Limited AWS experience: Study AWS documentation, practice on a test environment, and follow official AWS guides.
 
 #### Contingency Plans
-- Revert to manual methods if AWS fails.
-- Use CloudFormation for cost-related rollbacks.
+- Prioritize completion of core features, monitor cost continuously, and back up data periodically to minimize risk. When incidents occur, the system will perform recovery, retry the request, or roll back to a stable version to ensure continuous operation.
 
 ### 8. Expected Outcomes
-#### Technical Improvements: 
-Real-time data and analytics replace manual processes.  
-Scalable to 10-15 stations.
+
+#### Technical Improvements
+* **Automatic Scalability**: Fully replaces the manual grading workflow with an automated engine running 24/7, capable of scaling elastically with sudden submission spikes without overloading the system.
+* **Multi-Format Processing**: Builds a resilient intake channel that automatically converts handwritten photos, PDF files, and raw text into one standardized, unified data context.
+* **Structured Data Modeling**: Normalizes free-form essays into strict JSON schemas, breaking out each scoring criterion in detail to serve downstream consuming applications.
+
 #### Long-term Value
-1-year data foundation for AI research.  
-Reusable for future projects.
+* **Academic Research Dataset**: Curates a clean, structured historical essay database that becomes a valuable asset for future NLP research or for fine-tuning specialized Large Language Models (LLMs) within the lab.
+* **Documentation & Reusable Blueprint**: Acts as a clean blueprint for a pure serverless architecture, so other development teams can learn the asynchronous data buffering, secured-edge integration, and cost-optimized orchestration patterns used here.
