@@ -27,3 +27,5 @@ pre: " <b> 1. </b> "
 
 **Tuần 10:** [Sự kiện cộng đồng, nghiên cứu Voice AI và dọn dẹp cuối cùng](1.10-week10/)
 
+**Tuần 11:** [Triển khai, kiểm thử và hoàn thành dự án cuối kỳ](1.11-week11/)
+

@@ -29,3 +29,5 @@ This worklog covers 10 weeks of AWS learning and project development with the fo
 **Week 9:** [Final project review, mentor feedback, and cleanup](1.9-week9/)
 
 **Week 10:** [Community event, Voice AI research, and final cleanup](1.10-week10/)
+
+**Week 11:** [Final project deployment, testing and report submission](1.11-week11/)
