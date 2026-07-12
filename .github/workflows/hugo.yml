@@ -22,7 +22,6 @@ jobs:
       - name: Checkout source code
         uses: actions/checkout@v4
         with:
-          submodules: recursive
           fetch-depth: 0
 
       - name: Setup Hugo
@@ -33,13 +32,6 @@ jobs:
 
       - name: Build website
         run: hugo --minify
-
-      - name: Remove legacy CNAME
-        run: |
-          if [ -f public/CNAME ]; then
-            echo "Removing stale CNAME: $(cat public/CNAME)"
-            rm -f public/CNAME
-          fi
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
