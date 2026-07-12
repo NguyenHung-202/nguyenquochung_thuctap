@@ -1,5 +1,4 @@
 baseURL = "https://NguyenHung-202.github.io/nguyenquochung_thuctap/"
-relativeURLs = true
 canonifyURLs = false
 defaultContentLanguage = "en"
 
