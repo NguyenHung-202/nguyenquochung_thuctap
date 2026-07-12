@@ -21,7 +21,7 @@ Key points to know:
 
 This feature is especially useful for Cloud and Database Engineers who want to accelerate runbook preparation, verify source compatibility, and run database migrations safely in production environments.
 
-![Aurora MySQL Migration](/nguyenquochung_thuctap/images/image.png)
+![Aurora MySQL Migration](/nguyenquochung_thuctap/images/architecture.png)
 
 * Original post: [AWS Database Blog - Guide your Amazon Aurora MySQL migration with Kiro Powers](https://aws.amazon.com/blogs/database/guide-your-amazon-aurora-mysql-migration-with-kiro-powers/)
 * Shared post: [Facebook Post](https://www.facebook.com/share/p/1Cm3CCtsaw/)
