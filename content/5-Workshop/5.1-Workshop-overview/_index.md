@@ -10,7 +10,7 @@ pre : " <b> 5.1. </b> "
 
 The system is built entirely on a **Serverless** architecture, which automatically scales, optimizes costs, and requires no server management.
 
-![System Architecture](/sodo.png)
+![System Architecture](/images/2-Proposal/sodo.png)
 
 #### Key Project Components
 

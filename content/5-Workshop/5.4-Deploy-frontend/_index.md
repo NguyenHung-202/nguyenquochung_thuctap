@@ -40,9 +40,9 @@ This script fetches CloudFormation outputs, writes the configuration .env file, 
 powershell -ExecutionPolicy Bypass -File .\deploy-frontend.ps1
 ```
 
-![Deploy script execution console](/7.png)
+![Deploy script execution console](/images/5-Workshop/5.4-S3-onprem/7.png)
 
-![Deploy script execution console](/8.png)
+![Deploy script execution console](/images/5-Workshop/5.4-S3-onprem/8.png)
 ##### Output Console:
 
 ```text

@@ -31,7 +31,7 @@ The system uses the **Gemini 1.5 Flash** model for essay evaluation. Get a key b
 2. Log in and click **Get API Key**.
 3. Create a new key and copy its value.
 
-![Get Gemini API Key](/gemini-api-key.png)
+![Get Gemini API Key](/images/5-Workshop/5.2-Prerequisite/gemini-api-key.png)
 
 ---
 
@@ -49,8 +49,8 @@ aws ssm put-parameter \
     --overwrite
 ```
 
-![Create Parameter Store in AWS](/Parameter.png)
-![Create Parameter Store in AWS](/Parameter-2.png)
+![Create Parameter Store in AWS](/images/5-Workshop/5.2-Prerequisite/Parameter.png)
+![Create Parameter Store in AWS](/images/5-Workshop/5.2-Prerequisite/Parameter-2.png)
 
 > **Important Note:** The parameter name `/essay-scoring/gemini-api-key` must match the one defined in the `template.yaml` file.
 

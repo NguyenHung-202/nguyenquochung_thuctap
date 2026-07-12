@@ -31,7 +31,7 @@ Hệ thống sử dụng mô hình ngôn ngữ lớn **Gemini 1.5 Flash** để 
 2. Đăng nhập bằng tài khoản Google của bạn và nhấn nút **Get API Key**.
 3. Tạo một API Key mới và copy giá trị của nó.
 
-![Get Gemini API Key](/gemini-api-key.png)
+![Get Gemini API Key](/images/5-Workshop/5.2-Prerequisite/gemini-api-key.png)
 
 ---
 
@@ -49,8 +49,8 @@ aws ssm put-parameter \
     --overwrite
 ```
 
-![Create Parameter Store in AWS](/Parameter.png)
-![Create Parameter Store in AWS](/Parameter-2.png)
+![Create Parameter Store in AWS](/images/5-Workshop/5.2-Prerequisite/Parameter.png)
+![Create Parameter Store in AWS](/images/5-Workshop/5.2-Prerequisite/Parameter-2.png)
 
 > **Lưu ý quan trọng:** Tên tham số `/essay-scoring/gemini-api-key` phải khớp chính xác với cấu hình khai báo trong file mẫu `template.yaml` của AWS SAM.
 
