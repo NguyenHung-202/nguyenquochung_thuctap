@@ -21,7 +21,7 @@ Các điểm chính cần nắm:
 
 Tính năng này đặc biệt hữu ích cho các kỹ sư Cloud/Database muốn rút ngắn thời gian chuẩn bị runbook, kiểm tra khả năng tương thích của cơ sở dữ liệu và triển khai migration an toàn trên môi trường production.
 
-![Aurora MySQL Migration](/images/image.png)
+![Aurora MySQL Migration](/nguyenquochung_thuctap/images/image.png)
 
 * Link bài viết gốc: [AWS Database Blog - Guide your Amazon Aurora MySQL migration with Kiro Powers](https://aws.amazon.com/blogs/database/guide-your-amazon-aurora-mysql-migration-with-kiro-powers/)
 * Link chia sẻ Facebook: [Facebook Post](https://www.facebook.com/share/p/1Cm3CCtsaw/)

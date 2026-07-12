@@ -31,7 +31,7 @@ sam build
 ```
 
 Once completed successfully, you should see the `Build Succeeded` message.
-![SAM Build Success](/images/5-Workshop/5.3-S3-vpc/sam-build.png)
+![SAM Build Success](/nguyenquochung_thuctap/images/5-Workshop/5.3-S3-vpc/sam-build.png)
 
 ---
 
@@ -69,4 +69,4 @@ When deployment finishes, keep a record of the values in the **Outputs** section
 * **`CognitoUserPoolClientId`:** Cognito Web Client ID.
 * **`FrontendUrl`:** CloudFront CDN Domain distributing the website.
 
-![CloudFormation Outputs Console](/images/5-Workshop/5.3-S3-vpc/6.png)
+![CloudFormation Outputs Console](/nguyenquochung_thuctap/images/5-Workshop/5.3-S3-vpc/6.png)

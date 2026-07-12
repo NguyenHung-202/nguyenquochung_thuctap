@@ -10,7 +10,7 @@ pre : " <b> 5.1. </b> "
 
 Hệ thống được xây dựng hoàn toàn trên nền tảng **Serverless** của AWS, giúp tự động co giãn theo lượng người dùng, tối ưu chi phí và không cần quản lý máy chủ.
 
-![System Architecture](/images/2-Proposal/sodo.png)
+![System Architecture](/nguyenquochung_thuctap/images/2-Proposal/sodo.png)
 
 #### Các thành phần chính của dự án
 

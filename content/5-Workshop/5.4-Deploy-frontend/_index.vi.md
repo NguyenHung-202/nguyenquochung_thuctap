@@ -41,8 +41,8 @@ powershell -ExecutionPolicy Bypass -File .\deploy-frontend.ps1
 ```
 *(Lưu ý: Chúng ta cần thêm đường dẫn của Node.js vào biến môi trường $env:Path để PowerShell có thể nhận diện lệnh npm)*
 
-![Màn hình chạy Deploy Script](/images/5-Workshop/5.4-S3-onprem/7.png)
-![Deploy script execution console](/images/5-Workshop/5.4-S3-onprem/8.png)
+![Màn hình chạy Deploy Script](/nguyenquochung_thuctap/images/5-Workshop/5.4-S3-onprem/7.png)
+![Deploy script execution console](/nguyenquochung_thuctap/images/5-Workshop/5.4-S3-onprem/8.png)
 
 ##### Kết quả đầu ra của Script:
 

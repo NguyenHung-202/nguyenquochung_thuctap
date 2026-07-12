@@ -18,7 +18,7 @@ Before submitting any essays, you must approve the subscription to receive autom
 2. Find the email sent by no-reply@sns.amazonaws.com with the subject **"AWS Notification - Subscription Confirmation"**.
 3. Click the **Confirm Subscription** link in the body. The browser will show **Subscription confirmed!**.
 
-![SNS subscription confirmation](/images/5-Workshop/5.5-Policy/9.jpeg)
+![SNS subscription confirmation](/nguyenquochung_thuctap/images/5-Workshop/5.5-Policy/9.jpeg)
 
 ---
 
@@ -29,7 +29,7 @@ Before submitting any essays, you must approve the subscription to receive autom
    * **Email:** testuser@gmail.com
    * **Password:** MatKhauChauAu123!
 
-![Sign In Page Web UI](/images/5-Workshop/5.5-Policy/10.png)
+![Sign In Page Web UI](/nguyenquochung_thuctap/images/5-Workshop/5.5-Policy/10.png)
 
 3. You will be redirected to the **Dashboard** page.
 
@@ -53,7 +53,7 @@ The system supports .txt files, images (.png, .jpg, .jpeg), and .pdf files. Subm
 ##### Case C: Uploading a Document (.pdf)
 1. Submit a .pdf file.
 2. Textract will scan the pages and extract the text blocks for evaluation.
-![Sign In Page Web UI](/images/5-Workshop/5.5-Policy/11.png)
+![Sign In Page Web UI](/nguyenquochung_thuctap/images/5-Workshop/5.5-Policy/11.png)
 
 
 ---
@@ -66,11 +66,11 @@ The system supports .txt files, images (.png, .jpg, .jpeg), and .pdf files. Subm
   * **Overall Score:** out of 100.
   * **Overall Feedback:** Advice and comments from the AI.
   * **Evaluation Criteria:** Score breakdown for Grammar, Vocabulary, Structure, and Coherence.
-![Dashboard Page UI](/images/5-Workshop/5.5-Policy/12.png)
+![Dashboard Page UI](/nguyenquochung_thuctap/images/5-Workshop/5.5-Policy/12.png)
 
 ##### 2. Check your Email Inbox:
 * Open your inbox and look for an email notification:
   * **Subject:** Essay Scored! File: [Your_Filename]
 * The body contains the score and the evaluation report.
 
-![Evaluation Detailed Report page](/images/5-Workshop/5.5-Policy/13.png)
+![Evaluation Detailed Report page](/nguyenquochung_thuctap/images/5-Workshop/5.5-Policy/13.png)

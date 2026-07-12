@@ -18,7 +18,7 @@ Trước khi thực hiện chấm điểm, bạn cần đồng ý đăng ký nh�
 2. Tìm một email được gửi từ no-reply@sns.amazonaws.com với tiêu đề **"AWS Notification - Subscription Confirmation"**.
 3. Nhấp vào liên kết **Confirm Subscription** trong email. Trình duyệt hiển thị thông báo **Subscription confirmed!** nghĩa là bạn đã kích hoạt thành công.
 
-![Xác nhận đăng ký email SNS](/images/5-Workshop/5.5-Policy/9.jpeg)
+![Xác nhận đăng ký email SNS](/nguyenquochung_thuctap/images/5-Workshop/5.5-Policy/9.jpeg)
 
 ---
 
@@ -30,7 +30,7 @@ Trước khi thực hiện chấm điểm, bạn cần đồng ý đăng ký nh�
    * **Email:** testuser@gmail.com
    * **Mật khẩu:** MatKhauChauAu123!
 
-![Giao diện đăng nhập website](/images/5-Workshop/5.5-Policy/10.png)
+![Giao diện đăng nhập website](/nguyenquochung_thuctap/images/5-Workshop/5.5-Policy/10.png)
 
 4. Sau khi đăng nhập thành công, bạn sẽ được chuyển hướng đến trang **Dashboard** của hệ thống.
 
@@ -56,7 +56,7 @@ Hệ thống hỗ trợ 3 loại định dạng đầu vào. Bạn có thể ti�
 1. Tương tự như trường hợp ảnh, upload một file tài liệu .pdf.
 2. Textract sẽ quét qua các trang tài liệu PDF để lấy chữ thô và gửi chấm điểm.
 
-![Màn hình giao diện Dashboard quản lý](/images/5-Workshop/5.5-Policy/11.png)
+![Màn hình giao diện Dashboard quản lý](/nguyenquochung_thuctap/images/5-Workshop/5.5-Policy/11.png)
 
 ---
 
@@ -69,11 +69,11 @@ Hệ thống hỗ trợ 3 loại định dạng đầu vào. Bạn có thể ti�
   * **Đánh giá chung (Overall Feedback):** Lời khuyên tổng quan từ AI.
   * **Phân tích chi tiết từng tiêu chí:** Đánh giá về Ngữ pháp (Grammar), Từ vựng (Vocabulary), Bố cục cấu trúc (Structure), và Sự mạch lạc (Coherence).
 
-![Giao diện báo cáo kết quả chi tiết](/images/5-Workshop/5.5-Policy/12.png)
+![Giao diện báo cáo kết quả chi tiết](/nguyenquochung_thuctap/images/5-Workshop/5.5-Policy/12.png)
 
 ##### 2. Kiểm tra Hộp thư Email:
 * Mở hộp thư email của bạn. Bạn sẽ nhận được một thư báo điểm mới từ hệ thống với tiêu đề:
   * **Essay Scored! File: [Ten_File_Cua_Ban]**
 * Nội dung email sẽ hiển thị chi tiết điểm số cùng toàn bộ bài đánh giá chấm điểm của AI, giúp bạn theo dõi kết quả ngay lập tức mà không cần mở website.
 
-![Thư báo điểm tự động từ SNS](/images/5-Workshop/5.5-Policy/13.png)
+![Thư báo điểm tự động từ SNS](/nguyenquochung_thuctap/images/5-Workshop/5.5-Policy/13.png)

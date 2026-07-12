@@ -27,7 +27,7 @@ The Automated English Essay Scoring System is an end-to-end essay grading platfo
 
 The system follows a fully serverless architecture on AWS. Users access the application through AWS Amplify and Amazon CloudFront, then call Amazon API Gateway. Amazon Cognito authenticates users; AWS Lambda runs the business logic; Amazon S3 stores uploaded essays and generated reports; Amazon SQS together with AWS Step Functions orchestrate the processing workflow. Amazon Textract extracts text from documents, and the Google Gemini API performs essay scoring and evaluation. Results are persisted into Amazon DynamoDB and Amazon S3, while Amazon SNS pushes notifications to the end user. The whole system is monitored with Amazon CloudWatch, AWS X-Ray, and secured with AWS IAM.
 
-![Automated English Essay Scoring System Architecture](/images/AWS-Serverless-AI-Architecture.drawio.png)
+![Automated English Essay Scoring System Architecture](/nguyenquochung_thuctap/images/AWS-Serverless-AI-Architecture.drawio.png)
 
 #### AWS Services Used
 

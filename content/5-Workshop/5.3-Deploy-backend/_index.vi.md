@@ -32,7 +32,7 @@ sam build
 
 Quá trình biên dịch sẽ sử dụng Maven để tải các thư viện Java dependencies và Node.js npm để cài đặt gói cho parser Lambda. Khi kết xuất thành công, bạn sẽ nhận được thông báo `Build Succeeded`.
 
-![SAM Build Thành công](/images/5-Workshop/5.3-S3-vpc/sam-build.png)
+![SAM Build Thành công](/nguyenquochung_thuctap/images/5-Workshop/5.3-S3-vpc/sam-build.png)
 
 ---
 
@@ -70,4 +70,4 @@ Sau khi deploy hoàn tất (khoảng 3-5 phút), CloudFormation sẽ hiển th�
 * **`CognitoUserPoolClientId`:** ID của Web Client dùng để xác thực Cognito từ trình duyệt.
 * **`FrontendUrl`:** Domain CloudFront CDN được tạo để phân phối website.
 
-![Màn hình CloudFormation Outputs](/images/5-Workshop/5.3-S3-vpc/6.png)
+![Màn hình CloudFormation Outputs](/nguyenquochung_thuctap/images/5-Workshop/5.3-S3-vpc/6.png)

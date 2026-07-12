@@ -27,7 +27,7 @@ Dự án Automated English Essay Scoring System là hệ thống chấm điểm 
 
 Hệ thống được xây dựng theo mô hình Serverless trên nền tảng AWS. Người dùng truy cập ứng dụng thông qua AWS Amplify và Amazon CloudFront, sau đó gửi yêu cầu đến Amazon API Gateway. Hệ thống sử dụng Amazon Cognito để xác thực người dùng, AWS Lambda để xử lý nghiệp vụ, Amazon S3 để lưu trữ bài luận và kết quả, Amazon SQS cùng AWS Step Functions để điều phối quy trình xử lý. Amazon Textract trích xuất văn bản từ tài liệu và Google Gemini API thực hiện chấm điểm, đánh giá bài luận. Kết quả được lưu trên Amazon DynamoDB và Amazon S3, đồng thời Amazon SNS gửi thông báo đến người dùng. Toàn bộ hệ thống được giám sát bằng Amazon CloudWatch, AWS X-Ray và quản lý quyền truy cập bằng AWS IAM. 
 
-![Automated English Essay Scoring System Architecture](/images/AWS-Serverless-AI-Architecture.drawio.png)
+![Automated English Essay Scoring System Architecture](/nguyenquochung_thuctap/images/AWS-Serverless-AI-Architecture.drawio.png)
 
 #### Các Dịch vụ AWS Sử dụng
 
