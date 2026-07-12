@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -15,6 +16,9 @@ jobs:
     steps:
       - name: Checkout source code
         uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
@@ -25,10 +29,19 @@ jobs:
       - name: Build website
         run: hugo --minify
 
+      - name: Remove legacy CNAME (force project-page mode, not custom domain)
+        run: |
+          if [ -f public/CNAME ]; then
+            echo "Removing stale CNAME: $(cat public/CNAME)"
+            rm -f public/CNAME
+          fi
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-          publish_branch: gh-pages # <- đảm bảo đúng tên nhánh bạn dùng để deploy
-          force_orphan: true # <- đảm bảo xóa lịch sử cũ ở nhánh gh-pages (giảm lỗi)
+          publish_branch: gh-pages
+          force_orphan: true
+          enable_force_orphan: true
+          keep_files: false
