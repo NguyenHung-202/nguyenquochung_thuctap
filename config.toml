@@ -1,6 +1,6 @@
 baseURL = "https://NguyenHung-202.github.io/nguyenquochung_thuctap/"
-relativeURLs = false
-canonifyURLs = true
+relativeURLs = true
+canonifyURLs = false
 defaultContentLanguage = "en"
 
 # Change the default theme to be use when building the site with Hugo
